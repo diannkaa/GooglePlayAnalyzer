@@ -27,10 +27,6 @@ namespace GooglePlayAnalyzer.Domain.Entities
         public DateTime? LastUpdated { get; set; }
         public string CurrentVer { get; set; } = string.Empty;
         public string AndroidVer { get; set; } = string.Empty;
-        public override string ToString()
-        {
-            return $"{Name} - {Category.Name} (${Price ?? 0})";
-        }
     }
 }
 

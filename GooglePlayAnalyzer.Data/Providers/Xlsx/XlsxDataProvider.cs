@@ -12,10 +12,6 @@ namespace GooglePlayAnalyzer.Data.Providers.Xlsx
 {
     public class XlsxDataProvider : IDataProvider<App>
     {
-        public List<App> Read(string path)
-        {
-            return Load(path);
-        }
         public List<App> Load(string path)
         {
             List<App> apps = new List<App>();
@@ -48,12 +44,8 @@ namespace GooglePlayAnalyzer.Data.Providers.Xlsx
                         AndroidVer = row.Cell(13).GetValue<string>()
                     };
 
-                    if (DateTime.TryParse(
-                        row.Cell(11).GetValue<string>(),
-                        out DateTime lastUpdated))
-                    {
+                    if (DateTime.TryParse(row.Cell(11).GetValue<string>(), out DateTime lastUpdated))
                         app.LastUpdated = lastUpdated;
-                    }
 
                     apps.Add(app);
                 }
@@ -63,8 +55,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Xlsx
         }
         public bool ValidateFile(string path)
         {
-            return File.Exists(path) &&
-                   Path.GetExtension(path).Equals(".xlsx", StringComparison.OrdinalIgnoreCase);
+            return File.Exists(path) && Path.GetExtension(path).Equals(".xlsx", StringComparison.OrdinalIgnoreCase);
         }
         public string GetFileInfo(string path)
         {
@@ -104,9 +95,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Xlsx
                 };
 
                 for (int i = 0; i < headers.Length; i++)
-                {
                     worksheet.Cell(1, i + 1).Value = headers[i];
-                }
 
                 for (int i = 0; i < apps.Count; i++)
                 {

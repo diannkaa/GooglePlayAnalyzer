@@ -32,8 +32,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Xml
         }
         public bool ValidateFile(string path)
         {
-            return File.Exists(path) &&
-                   Path.GetExtension(path).Equals(".xml", StringComparison.OrdinalIgnoreCase);
+            return File.Exists(path) && Path.GetExtension(path).Equals(".xml", StringComparison.OrdinalIgnoreCase);
         }
         public string GetFileInfo(string path)
         {
@@ -46,9 +45,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Xml
         }
         public void Write(string path, List<App> apps)
         {
-            XElement root = new XElement(
-                "Apps", apps.Select(CreateAppElement));
-
+            XElement root = new XElement("Apps", apps.Select(CreateAppElement));
             XDocument document = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
 
             document.Save(path);
@@ -130,7 +127,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Xml
             if (string.IsNullOrWhiteSpace(element?.Value))
                 return null;
 
-            return double.TryParse( element.Value, NumberStyles.Any, CultureInfo.InvariantCulture, out double value) ? value : null;
+            return double.TryParse(element.Value, NumberStyles.Any, CultureInfo.InvariantCulture, out double value) ? value : null;
         }
         private static DateTime? GetNullableDate(XElement element)
         {

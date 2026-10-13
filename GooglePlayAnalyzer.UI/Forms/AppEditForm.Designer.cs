@@ -115,7 +115,6 @@
             label6.Size = new Size(162, 20);
             label6.TabIndex = 5;
             label6.Text = "Кількість встановлень";
-            label6.Click += label6_Click;
             // 
             // labelType
             // 
@@ -125,7 +124,6 @@
             labelType.Size = new Size(35, 20);
             labelType.TabIndex = 6;
             labelType.Text = "Тип";
-            labelType.Click += labelType_Click;
             // 
             // labelPrice
             // 
@@ -135,7 +133,6 @@
             labelPrice.Size = new Size(41, 20);
             labelPrice.TabIndex = 7;
             labelPrice.Text = "Ціна";
-            labelPrice.Click += labelPrice_Click;
             // 
             // labelContentRating
             // 
@@ -230,7 +227,6 @@
             textBoxPrice.Name = "textBoxPrice";
             textBoxPrice.Size = new Size(125, 27);
             textBoxPrice.TabIndex = 21;
-            textBoxPrice.TextChanged += textBoxPrice_TextChanged;
             // 
             // textBoxContentRating
             // 

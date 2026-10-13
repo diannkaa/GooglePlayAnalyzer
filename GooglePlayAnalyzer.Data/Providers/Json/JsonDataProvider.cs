@@ -24,8 +24,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Json
         }
         public bool ValidateFile(string path)
         {
-            return File.Exists(path) &&
-                   Path.GetExtension(path).Equals(".json", StringComparison.OrdinalIgnoreCase);
+            return File.Exists(path) && Path.GetExtension(path).Equals(".json", StringComparison.OrdinalIgnoreCase);
         }
         public string GetFileInfo(string path)
         {

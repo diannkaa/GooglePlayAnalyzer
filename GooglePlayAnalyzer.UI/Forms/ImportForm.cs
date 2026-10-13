@@ -467,15 +467,5 @@ namespace GooglePlayAnalyzer.UI.Forms
 
             labelResult.Text = $"Попередній перегляд: перші " + $"{preview.Rows.Count} рядків із " + $"{preview.TotalRows}.";
         }
-
-        private void comboBoxDelimiter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewApps_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

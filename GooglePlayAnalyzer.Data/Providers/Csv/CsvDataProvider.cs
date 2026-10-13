@@ -26,8 +26,7 @@ namespace GooglePlayAnalyzer.Data.Providers.Csv
         }
         public bool ValidateFile(string path)
         {
-            return File.Exists(path) &&
-                   Path.GetExtension(path).Equals(".csv", StringComparison.OrdinalIgnoreCase);
+            return File.Exists(path) && Path.GetExtension(path).Equals(".csv", StringComparison.OrdinalIgnoreCase);
         }
         public string GetFileInfo(string path)
         {

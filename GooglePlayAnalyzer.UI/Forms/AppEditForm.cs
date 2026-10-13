@@ -218,25 +218,5 @@ namespace GooglePlayAnalyzer.UI.Forms
             DialogResult = DialogResult.Cancel;
             Close();
         }
-
-        private void labelPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

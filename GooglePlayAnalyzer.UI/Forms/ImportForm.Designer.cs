@@ -138,7 +138,6 @@
             dataGridViewApps.RowHeadersWidth = 51;
             dataGridViewApps.Size = new Size(763, 328);
             dataGridViewApps.TabIndex = 6;
-            dataGridViewApps.CellContentClick += dataGridViewApps_CellContentClick;
             // 
             // buttonClose
             // 
@@ -198,7 +197,6 @@
             comboBoxDelimiter.Name = "comboBoxDelimiter";
             comboBoxDelimiter.Size = new Size(151, 28);
             comboBoxDelimiter.TabIndex = 12;
-            comboBoxDelimiter.SelectedIndexChanged += comboBoxDelimiter_SelectedIndexChanged;
             // 
             // comboBoxEncoding
             // 

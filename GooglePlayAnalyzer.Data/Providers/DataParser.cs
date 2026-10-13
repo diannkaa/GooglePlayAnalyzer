@@ -107,6 +107,7 @@ using GooglePlayAnalyzer.Domain.Validation;
                     {
                         result.Errors.Add($"Неправильний заголовок колонки №{i + 1}. " + $"Очікується: {ExpectedHeaders[i]}.");
                         return false;
+
                     }
                 }
                 return true;
@@ -258,7 +259,7 @@ using GooglePlayAnalyzer.Domain.Validation;
                 "yyyy-MM-dd",
                 "dd.MM.yyyy",
                 "MM/dd/yyyy"
-            };
+                };
 
                 if (DateTime.TryParseExact(value, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
                     return result;
